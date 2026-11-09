@@ -1,9 +1,136 @@
 /* Juniper & Grain brand colors, from the client brief */
 :root {
-  --sage: #3f5a46;
+  --sage: #0f4e20;
   --terracotta: #c8693f;
-  --cream: #f7f2e9;
+  --cream: #e9f7f2;
   --espresso: #2b211c;
+  --brown: #3d2515; /* i added this brown */
+  --offwhite: #f3ece9;
 }
 
-/* Your styles go below. */
+
+
+/* my css */
+
+body {
+  background-color: var(--offwhite);
+}
+/* logo up top */
+.logo {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+/* menu title */
+h1 {
+  font-size: 3rem;
+  color: var(--brown);
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* section titles */
+h2 {
+  font-size: 2.5rem;
+  color: var(--brown);
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* filter buttons at the top */
+#filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#filters button {
+  border: 5px solid var(--sage);
+  border-radius: 100px;
+  background-color: var(--sage);
+  color: var(--cream);
+  font-size: 1.15rem;
+  padding: 8px 18px;
+}
+
+#filters button:hover, #filters button.active {
+  background-color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
+/* menu cards */
+#menu .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 12px rgb(43 33 28 / 12%);
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--brown);
+}
+
+.card-body > p {
+  margin: 8px 0;
+}
+
+/* little tags for stuff like vegan / hot / etc */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 4px 9px;
+  border-radius: 20px;
+  background-color: var(--cream);
+  color: var(--espresso);
+  font-size: 0.85rem;
+}
+
+.card .price {
+  color: var(--sage);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background-color: var(--terracotta);
+  color: white;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+.card.is-sold {
+  opacity: 0.65;
+}
+
+.card .sold {
+  color: var(--terracotta);
+  font-weight: bold;
+}
